@@ -1,0 +1,427 @@
+@import "bourbon"
+@import "vars.sass"
+
+@import "app/libs/owl.carousel/dist/assets/owl.carousel.min"
+
+body
+	font-size: 16px
+	min-width: 320px 
+	position: relative
+	line-height: 1.5
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+	color: #111
+
+.hidden
+	display: none
+
+
+a
+	outline: none !important
+
+
+strong, b
+	font-family: "RobotoBold", sans-serif
+
+
+h1, h2, h3, h4, h5, h6, .button,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "RobotoCondensedBold", sans-serif
+	font-weight: bold
+	text-transform: uppercase
+
+.text-right
+	text-align: right
+
+.text-left
+	text-align: left
+
+.text-center
+	text-align: center
+
+
+
+.isnohome
+	.top-line .sf-menu > li > a
+		padding: 15px 28px
+
+
+
+.owl-carousel
+	position: absolute
+	z-index: 0
+
+
+.top-line
+	background-color: $main-color
+	text-align: center
+	border-bottom: lighten($main-color, 6%) 1px solid
+	position: relative
+	z-index: 2;
+	a
+		color: #fff
+	ul, li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	.sf-menu
+		margin: 0 auto -7px
+		float: none
+		display: inline-block
+		font-family: "RegularCondensedRegular", sans-serif
+		font-size: em(15px)
+		background-color: $main-color
+		a
+			border-bottom: lighten($main-color, 5%) 1px solid
+			border-top: none
+			border-left: none
+		>li
+			background-color: transparent
+			&.active
+				background-color: darken($main-color, 3%)
+				>a
+					color: $accent-color
+			>a
+				color: #fff
+				border: none
+				padding: 25px 28px 25px !important
+				.fa
+					font-size: 11px
+					margin-left: 2px
+			&:hover
+				background-color: darken($main-color, 3%)
+				a
+					color: #fff
+			a
+				padding: 12px 25px 12px
+				text-align: center
+				color: #fff
+		>li
+			&:hover
+				>a
+					color: $accent-color
+
+				
+			ul
+				width: 100%
+				li
+					background-color: $main-color
+					&:hover
+						>a
+							color: $accent-color
+					a
+						padding: 10px
+						color: #fff
+		 	
+
+
+/* Top Pannel*/
+
+.top-pannel
+	background-color: rgba(lighten($main-color, 2%), .8)
+	color: #fff
+	padding: 50px 0
+	position: relative
+	z-index: 1
+	box-shadow: 0 5px 0 5px rgba(255,255,255,.3)
+	&-content
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-image: url(../img/top-pannel-bg.jpg)
+		z-index: 0
+		opacity: .16
+	&-box
+		h4
+			font-family: "RobotoCondensedRegular", sans-serif
+			font-size: em(15px)
+			margin-top: 0
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -10px
+				height: 1px 
+				width: 100%
+				background-color: $accent-color
+				opacity: .4
+
+		ul, li
+			padding: 0
+			margin: 0
+			list-style-type: none
+		li
+			display: inline-block
+			max-width: 48%
+			opacity: .4
+			font-size: em(12px)
+			padding: 0 10px 0 22px
+			position: relative
+			&:only-child
+				max-width: 100%
+			.fa
+				font-size: 16px
+				position: absolute
+				left: 0
+				top: 6px
+		
+
+
+.logo
+	img
+		max-width: 100%
+	position: relative
+	top: 3px
+
+
+.top-phone	
+	font-size: em(19px)
+	font-family: "RobotoCondensedRegular", sans-serif
+	margin-top: -3px
+	white-space: nowrap
+	span
+		font-size: em(12px)
+		opacity: .25
+
+
+.top-email
+	font-size: 14px
+	white-space: nowrap
+	a
+		color: #fff
+		text-decoration: underline
+	span
+		opacity: .25
+
+.top-email,
+.top-phone
+	.fa
+		margin-right: 3px
+
+
+.button
+	color: #111
+	background-color: $accent-color
+	border-radius: 2px
+	font-size: em(15px)
+	padding: 10px 35px
+	position: relative
+	transition: background-color .25s ease
+	border: none
+	&::after
+		position: absolute
+		content: ''
+		background-color: darken($accent-color, 10%)
+		width: 100%
+		bottom: 0
+		height: 3px
+		left: 0
+		border-bottom-right-radius: 2px
+		border-bottom-left-radius: 2px
+
+	&:hover, &focus
+		text-decoration: none
+		color: #222
+		background-color: lighten($accent-color, 10%)
+	&-small
+		height: 2px
+		padding: 6px 18px
+
+.top-button
+	margin-top: 21px
+
+
+/* Slider*/
+
+
+.slider-wrap
+	.slider-nav-container
+		position: relative
+	.slider-nav
+		color: #fff
+		font-size: 36px
+		position: absolute
+		width: 100%
+		z-index: 2
+		div
+			cursor: pointer
+			position: absolute
+			top: 180px
+			padding: 0 5px
+			&:last-child
+				right: 0
+
+
+
+.slider
+	
+	top: 0
+	width: 100%
+	overflow-x: hidden
+	.owl-dots
+		position: absolute
+		bottom: 50px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin: 0 2px
+			width: 14px
+			height: 14px
+			background-color: darken($main-color, 10%)
+			border-radius: 10em
+			transition: background-color .25s ease
+			&.active
+				background-color: $accent-color
+	.slide
+		color: #fff
+		/*padding-top: 300px*/
+		padding-bottom: 110px
+		position: relative
+		h2
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: em(40px)
+			margin-top: 0
+			margin-bottom: 20px
+			line-height: em(20px)
+			&:first-line
+				color: $accent-color
+		p
+			font-family: "RobotoLight", sans-serif
+			opacity: .75
+			margin-bottom: 40px
+
+		&-bg
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-size: cover
+			&::before
+				content: ''
+				background-color: $main-color
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				position: absolute
+				opacity: .85
+		&-content
+			position: relative
+			z-index: 1
+			padding-top: 80px
+
+.slide-img-wrap
+	img
+		max-width: 100%
+	padding-top: 12px
+
+/*Mobile menu*/
+
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 28px
+  float: left
+
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $main-color
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+
+
+.mobile-mnu
+	padding: 7px 15px 6px 15px
+	color: $main-color
+	cursor: pointer
+	background-color: $accent-color
+	position: relative
+	z-index: 2
+	b
+		display: block
+		text-align: center
+		font-family: "RobotoRegular", sans-serif
+		font-size: em(15px)
+
+
+.sect-teaser
+	background-color: $main-color
+	color: #fff
+	padding: 28px 0 
+
+.teaser
+	&-item
+		display: table-row
+	&-count
+		display: table-cell
+		position: relative
+		vertical-align: middle
+		.fa
+			font-size: 48px
+			color: lighten($main-color, 10%)
+		&-wrap
+			position: relative
+			width: 43px
+			height: 43px
+		
+		.teaser-number
+			position: absolute
+			width: 100%
+			top: 8px
+			text-align: center
+			font-family: "RobotoCondensedBold", sans-serif
+			font-size: 22px
+			color: $accent-color
+
+	&-text
+		display: table-cell
+		font-family: "RobotoCondensedLight", sans-serif
+		line-height: 20px
+		padding-left: 15px
+		opacity: .28
+
+
+
+
+
+	
+
+
+
+
